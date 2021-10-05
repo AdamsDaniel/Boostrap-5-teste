@@ -1,0 +1,43 @@
+.btn-rounded {
+    transition: background-color 0.9s ease-out 50ms;
+    transition-duration: 0.3s;
+    transition-property: transform;
+
+    svg {
+        transition: all .3s ease-in-out;
+    }
+
+    &.grow {
+        transition: all .3s ease-in-out;
+    }
+
+    &:hover {
+        -webkit-transition: all .3s ease-in-out;
+        -webkit-transform: scale(1.1);
+        -ms-transition: all .3s ease-in-out;
+        -ms-transform: scale(1.1);
+        -moz-transition: all .3s ease-in-out;
+        -moz-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: all .3s ease-in-out;
+
+        &:active{
+            transition: all .1s ease-in-out;
+            transform: scale(1.05);
+            transition-duration: 0.1s;
+        }
+
+        .btn-tele {
+            transition: all .3s ease-in-out;
+
+            svg {
+                transition: all .3s ease-in-out;
+            }
+        }
+    }
+}
+
+.btn-tele {
+    transform: translateY(-50%);
+    transition: all .3s ease-in-out;
+}

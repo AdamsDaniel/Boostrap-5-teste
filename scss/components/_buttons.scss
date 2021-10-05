@@ -1,0 +1,52 @@
+@use "../custom"as *;
+@use '../components/mixins'as *;
+
+.btn-rounded {
+    
+    //tira número de telefone de telas menores
+    @media (max-width: 991px){
+        display:none
+    }
+    //aumenta o svg
+    @media (min-width: 992px) and (max-width: 1200px) { 
+        padding: 0.9375rem 3.775rem 0.9375rem 0.93rem;
+    }
+
+    position: relative;
+    padding: 0.9375rem 3.775rem 0.9375rem 0.93rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin: 0 0 0 8px;
+    border: 0.1rem solid rgba($white, 0.6);
+    background-color: transparent;
+    color: $white;
+
+    svg {
+        color: $secondary;
+    }
+
+    &:hover {
+        background-color: $white;
+        color: black;
+        box-shadow: 3px 3px 4px rgba(#000000, 0.5);
+        z-index: 2;
+
+        .btn-tele {
+            background-color: $secondary;
+
+            svg {
+                color: $white;
+            }
+        }
+    }
+}
+
+.btn-tele {
+    position: absolute;
+    background-color: $white;
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 50%;
+    right: 8px;
+    border-radius: 50%;
+}
